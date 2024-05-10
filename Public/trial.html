@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Background Effect</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* Perspective value */
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0000, #0000ff);
+    opacity: 0.8; /* Adjust opacity as needed */
+    transform: translateZ(-2000px) scale(2);
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content appears above background */
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="background"></div>
+    <div class="content">
+        3D Background Effect 
+    </div>
+    <section>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, sapiente? Numquam dolorem doloribus assumenda? Dignissimos explicabo, itaque cum voluptate culpa obcaecati, dolores rerum, laudantium cumque repudiandae temporibus officia consectetur iure dolorem quaerat numquam. Saepe, eius, praesentium accusantium laudantium tenetur neque sunt pariatur quibusdam asperiores nulla velit, quae ea autem ipsa. Ea dolorem earum eligendi perspiciatis, molestias in sed cum dicta est voluptatem aliquid at tenetur totam possimus vero eius. Culpa nemo sit, hic in perspiciatis, illum itaque ut a aperiam mollitia, nam vero. Earum praesentium unde animi, perferendis ab deserunt, numquam veritatis incidunt, natus suscipit eligendi recusandae. Libero unde sequi facere eum ad repellat, dicta cumque mollitia provident amet a expedita natus, aperiam eaque, ipsum excepturi ea et iure nisi perspiciatis ullam? Rem perspiciatis unde placeat, illo earum soluta temporibus eos nisi ipsam commodi aut nesciunt voluptatibus odit in voluptates laboriosam distinctio quasi odio aliquam ea dolorem nemo. Repudiandae cupiditate in quo. Voluptatibus itaque ab, labore esse non exercitationem quasi est ipsa alias harum cum modi. Ipsam, doloremque aperiam ea atque optio saepe porro ullam, delectus soluta sequi, itaque dolor blanditiis minus natus modi? At, magnam sequi! Consectetur culpa sunt, repellat, labore vero explicabo quae, nulla hic dolores suscipit in.
+    </section>
+</div>
+</body>
+</html>

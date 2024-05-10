@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+header {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: antiquewhite;
+    /* position: fixed; */
+    z-index: 1;
+}
+header > div {
+    display: flex;
+    justify-self: start;
+    align-items: start;
+    align-content: center;
+    gap: 1.1rem;
+}
+header img {
+    /* display: block; */
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+    height: 3rem;
+}
+header nav a{
+    padding: 10px 60px;
+    text-decoration: none;
+    color: orangered;
+    border-radius: 20px;
+    font-weight: bold;
+}
+header nav a:hover{
+    background-color: rgb(36, 143, 0);
+    color: orangered;
+}
+
+.technical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    padding: 6rem 0rem;
+    background-color: rgb(172, 208, 172);
+}
+.technical .tech-intro {
+    font-size: 2.2rem;
+    color: orangered;
+}
+.technical .tech-detail {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: orangered;
+}
+.container {
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem;
+    column-gap: 5rem;
+    row-gap: 5rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+.course {
+    /* border: 2px solid black; */
+    height: 20rem;
+    width: 15rem;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+    border-radius: 1.3rem;
+}
+.course img {
+    height: 10rem;
+    border-top-right-radius: 1.3rem;
+}
+.course p {
+    font-size: 0.9rem;
+}
+.Awarness{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.title-awarness-para {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    width: 50%;
+}
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+}
+form .user-details .input-box{
+    width: 100%;
+}
+.title{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.input-date {
+    height: 2rem;
+    border: 1px solid #bfbfbf;
+    padding: 0.2rem;
+}
+.user-details .input-box .input-text{
+    height: 45px;
+    width:100%;
+    border: 1px solid #bfbfbf;
+    font-size: 16px;
+    padding-left: 1.2rem;
+    /* background-color: rgb(235, 235, 223); */
+    background-color: whitesmoke;
+}
+.user-details .input-box textarea{
+    /* height: 45px; */
+    width:100%;
+    border: 1px solid #bfbfbf;
+    font-size: 16px;
+    padding-left: 1.2rem;
+    background-color: rgb(235, 235, 223);
+}
+form button{
+height: 20%;
+width: 40%;
+border-radius: 2rem;
+color: black;
+border: none;
+font-size: 1.1rem;
+font-weight: 500;
+padding: 0.7rem;
+background-color: orangered;
+} 
+form button:hover{
+    background-color: rgb(235, 235, 223);
+    color: black;
+    border: 1px solid black;
+}
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+    gap: 2rem;
+}
+.footer_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_img {
+    width: 7rem;
+}
+.socials a {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%; /* This creates the circle */
+    background-color: antiquewhite; /* Change the background color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1.2rem;
+}
+.copyright{
+    color: antiquewhite;
+}
+.copyright p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}

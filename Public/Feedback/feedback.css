@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+/* navbar */
+header {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.6rem;
+    background-color: antiquewhite;
+    position: relative;
+    z-index: 10;
+}
+header > div {
+    display: flex;
+    justify-self: start;
+    align-items: start;
+    align-content: center;
+    font-size: 1rem;
+    gap: 1.1rem;
+}
+header img {
+    max-width: 100%;
+    height: 3rem;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li {
+    padding-right: 5rem;
+}
+header svg {
+    display: none;
+}
+header nav a {
+    /* padding: 10px 60px; */
+    font-size: 1rem;
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+}
+header nav a:hover{
+    color: green;
+    cursor: pointer;
+}
+
+/* contact */
+.Main {
+    position: sticky;
+    background-color: rgb(172, 208, 172);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.Main img {
+    height: 5rem;
+}
+.Main h4 {
+    font-size: 1.3rem;
+}
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    padding-bottom: 0.9rem;
+}
+.telephone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    padding-bottom: 0.9rem;
+}
+.mail {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 1.1rem;
+    padding-bottom: 0.9rem;
+}
+
+/* feedback form */
+#feedback_form_module {
+    width: 100%;
+    margin: auto;
+    background-color: antiquewhite;
+    position: relative;
+    top: 10%;
+    padding: 2rem;
+}
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    justify-content: center;
+    align-items: center;
+}
+textarea {
+    width: 35%;
+    background: rgb(235, 235, 223);
+}
+.input-box{
+    width: 35%;
+}
+.title{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.input-box input{
+    height: 45px;
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    font-size: 16px;
+    padding-left: 1.2rem;
+    background-color: rgb(235, 235, 223);
+}
+form button{
+height: 100%;
+width: 20%;
+color: rgb(235, 235, 223);
+border: none;
+font-size: 1.1rem;
+font-weight: 500;
+padding: 0.7rem;
+background-color: black;
+} 
+form button:hover{
+    background-color: rgb(235, 235, 223);
+    color: black;
+}
+
+/* footer  */
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+    gap: 2rem;
+}
+.footer_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer_img {
+    width: 7rem;
+}
+.socials a {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1.2rem;
+}
+.copyright{
+    color: antiquewhite;
+}
+.copyright p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
