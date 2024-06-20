@@ -6,7 +6,10 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+body {
+    height: 100%;
+    width: 100%;
+}
 /* navbar */
 header {
     min-width: 100%;
@@ -68,10 +71,7 @@ header nav a:hover{
     opacity: 0.5;
     z-index: 1;
 }  */
-main {
-    width: 100%;
-    height: 100vh;
-}
+
 .detail {
     height: 100vh;
     width: 100%;
@@ -141,8 +141,8 @@ main {
 }
 .rb2:hover{
     /* background-color: rgba(0, 0, 0, 0.768); */
-    /* background-color: antiquewhite; */
-    /* color: orangered; */
+    background-color: black;
+    color: orangered;
     /* color: black; */
     /* border: 2px solid orangered; */
     transform: translateY(-5px);
@@ -234,13 +234,13 @@ main {
 }
 .user-details .input-box input{
     height: 45px;
-    width:100%;
+    width: 100%;
     border: 1px solid #bfbfbf;
     font-size: 16px;
     padding-left: 1.2rem;
     background-color: rgb(235, 235, 223);
 }
-form button{
+.form-button {
 height: 100%;
 width: 75%;
 color: rgb(235, 235, 223);
@@ -426,8 +426,11 @@ form button:hover{
     }
 }
 @media screen and (max-width: 450px) {
+    /* navbar */
     header {
-        padding: 1rem 5rem;
+        width: 100%;
+        padding: 2rem 5rem;
+        position: absolute;
     }
     header > div {
         font-size: 0.8rem;
