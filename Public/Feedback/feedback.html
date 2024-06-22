@@ -1,125 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="feedback.css">
-    <link rel="stylesheet" href="../Feedback/responsive_feedback.css">
+    <!-- Add Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
-<body>
 
-    <!-- navbar -->
-    <header>
-        <div>
-            <img src="../Assest/Layer 1.png" alt="">
-            <h3><font color="orangered">TechVidhya</font>
-                <font color="green">Foundation</font></h3>
+<body class="font-poppins bg-yellow-100">
+
+    <!-- Navbar -->
+    <header class="bg-antiquewhite py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="../Assest/Layer 1.png" alt="TechVidhya Logo" class="max-w-full h-12">
+            <h3 class="text-orangered font-bold">TechVidhya</h3>
+            <h3 class="text-green font-bold">Foundation</h3>
         </div>
-        <nav id="nav">
-            <ul>
-                <li><a href="#header1">Home</a></li>
-                <li><a href="#anchor">About Us</a></li>
-                <li><a href="/technical">Technical Course</a></li>
-                <li><a href="/feedback">FeedBack</a></li>
-                <li><a href="/donation">Donation</a></li>
-                <li><a href="/awarness">Awarness</a></li>
+        <svg id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+            class="block lg:hidden text-orangered">
+            <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+        <nav id="nav" class="hidden lg:flex items-center">
+            <ul class="flex gap-10">
+                <li><a href="#header1" class="text-orangered hover:text-green">Home</a></li>
+                <li><a href="#anchor" class="text-orangered hover:text-green">About Us</a></li>
+                <li><a href="/technical" class="text-orangered hover:text-green">Technical Course</a></li>
+                <li><a href="/feedback" class="text-orangered hover:text-green">Feedback</a></li>
+                <li><a href="/donation" class="text-orangered hover:text-green">Donation</a></li>
+                <li><a href="/awareness" class="text-orangered hover:text-green">Awareness</a></li>
             </ul>
         </nav>
-        <svg id="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
-            <path d="M4 5L20 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 12L20 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 19L20 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
     </header>
 
-    <!-- contact -->
-    <div class="Main">
-            <div class="location">
-                <img src="../Assest/svg/feedback svg/location-04.svg" alt="">
-                <div>
-                    <h4>Location</h4>
-                    <p>Pune, India</p>
-                </div>
+    <!-- Feedback Form -->
+    <div id="feedback_form_module"
+        class="bg-antiquewhite py-8 px-10 lg:w-1/2 mx-auto mt-10 lg:mt-20 rounded-lg shadow-lg">
+        <form id="feedbackForm" action="/feedback" method="post" class="flex flex-col gap-4 items-center">
+            <h2 class="text-2xl font-bold">Feedback Form</h2>
+            <div class="input-box w-full">
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" required
+                    class="w-full px-4 py-3 rounded border-gray-300 focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
             </div>
-            <div class="telephone">
-                <img src="../Assest/svg/feedback svg/telephone.svg" alt="">
-                <div>
-                    <h4>Phone</h4>
-                    <p>+91 8446691000</p>
-                </div>
+            <div class="input-box w-full">
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name" required
+                    class="w-full px-4 py-3 rounded border-gray-300 focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
             </div>
-            <div class="mail">
-                <img src="../Assest/svg/feedback svg/mail-open.svg" alt="">
-                <div>
-                    <h4>Mail</h4>
-                    <p>sachin@techvidyafoundation.com</p>
-                </div>
+            <div class="input-box w-full">
+                <input type="email" id="email" name="email" placeholder="Email"
+                    class="w-full px-4 py-3 rounded border-gray-300 focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
             </div>
-    </div>
-
-    <!-- feedback form -->
-    <div id="feedback_form_module">
-        <form id="feedbackForm" action="/feedback" method="post">
-            <h2 class="title">FeedBack Form</h2>
-            <div class="input-box">
-                <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+            <div class="input-box w-full">
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required
+                    class="w-full px-4 py-3 rounded border-gray-300 focus:border-green focus:ring focus:ring-green focus:ring-opacity-50">
             </div>
-            <div class="input-box">
-                <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
-            </div>
-            <div class="input-box">
-                <input type="text" id="email" name="email" placeholder="Mail" >
-            </div>
-            <div class="input-box">
-                <input type="text" id="phone" name="number" placeholder="Number" required>
-            </div>
-            <!-- <label>How do you rate your overall experience?:</label>
-            <div class="feedback-options">
-                <label for="excellent" class="feedback-option"><input type="radio" id="excellent" name="feedback-option" value="Excellent"> Excellent</label>
-                <label for="good" class="feedback-option"><input type="radio" id="good" name="feedback-option" value="Good"> Good</label>
-                <label for="average" class="feedback-option"><input type="radio" id="average" name="feedback-option" value="Average"> Average</label>
-                <label for="poor" class="feedback-option"><input type="radio" id="poor" name="feedback-option" value="Poor"> Poor</label>
-            </div> -->
-    
-            <label for="feedback">Any Comments or Suggestions:</label>
-            <textarea id="feedback" name="textarea_feedback" required></textarea>
-            <button class="btn">Submit</button>
+            <label for="feedback" class="text-lg">Any Comments or Suggestions:</label>
+            <textarea id="feedback" name="textarea_feedback" required
+                class="w-full px-4 py-3 rounded border-gray-300 focus:border-green focus:ring focus:ring-green focus:ring-opacity-50"></textarea>
+            <button type="submit"
+                class="w-1/5 py-3 bg-black text-white font-medium rounded-lg transition-colors duration-300 hover:bg-green hover:text-black focus:outline-none focus:ring focus:ring-green focus:ring-opacity-50">
+                Submit
+            </button>
         </form>
     </div>
 
-    <!-- footer -->
-    <footer>
-        <div class="footer_logo">
-            <img class="footer_img" src="../Assest/Layer 1.png" alt="">
-            <h3><font color="orangered">TechVidhya</font>
-                <font color="green">Foundation</font></h3>
+    <!-- Footer -->
+    <footer class="bg-black py-8 px-6 flex flex-col items-center mt-10 lg:mt-20 text-center text-white">
+        <div class="footer_logo flex items-center gap-3 mb-4">
+            <img src="../Assest/Layer 1.png" alt="TechVidhya Logo" class="w-28">
+            <h3 class="text-orangered font-bold">TechVidhya</h3>
+            <h3 class="text-green font-bold">Foundation</h3>
         </div>
-        <div class="socials">
-            <a href="https://www.linkedin.com/company/techvidya-foundation/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#0077B5">
-                <path d="M4.5 9.5H4C3.05719 9.5 2.58579 9.5 2.29289 9.79289C2 10.0858 2 10.5572 2 11.5V20C2 20.9428 2 21.4142 2.29289 21.7071C2.58579 22 3.05719 22 4 22H4.5C5.44281 22 5.91421 22 6.20711 21.7071C6.5 21.4142 6.5 20.9428 6.5 20V11.5C6.5 10.5572 6.5 10.0858 6.20711 9.79289C5.91421 9.5 5.44281 9.5 4.5 9.5Z" stroke="#0077B5" stroke-width="1.5"/>
-                <path d="M6.5 4.25C6.5 5.49264 5.49264 6.5 4.25 6.5C3.00736 6.5 2 5.49264 2 4.25C2 3.00736 3.00736 2 4.25 2C5.49264 2 6.5 3.00736 6.5 4.25Z" stroke="#0077B5" stroke-width="1.5"/>
-                <path d="M12.326 9.5H11.5C10.5572 9.5 10.0858 9.5 9.79289 9.79289C9.5 10.0858 9.5 10.5572 9.5 11.5V20C9.5 20.9428 9.5 21.4142 9.79289 21.7071C10.0858 22 10.5572 22 11.5 22H12C12.9428 22 13.4142 22 13.7071 21.7071C14 21.4142 14 20.9428 14 20L14.0001 16.5001C14.0001 14.8433 14.5281 13.5001 16.0879 13.5001C16.8677 13.5001 17.5 14.1717 17.5 15.0001V19.5001C17.5 20.4429 17.5 20.9143 17.7929 21.2072C18.0857 21.5001 18.5572 21.5001 19.5 21.5001H19.9987C20.9413 21.5001 21.4126 21.5001 21.7055 21.2073C21.9984 20.9145 21.9985 20.4432 21.9987 19.5006L22.0001 14.0002C22.0001 11.515 19.6364 9.50024 17.2968 9.50024C15.9649 9.50024 14.7767 10.1531 14.0001 11.174C14 10.5439 14 10.2289 13.8632 9.995C13.7765 9.84686 13.6531 9.72353 13.505 9.63687C13.2711 9.5 12.9561 9.5 12.326 9.5Z" stroke="#0077B5" stroke-width="1.5" stroke-linejoin="round"/>
-                </svg> 
+        <div class="socials flex gap-4 mb-4">
+            <a href="https://www.linkedin.com/company/techvidya-foundation/" target="_blank"
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-antiquewhite text-black text-2xl hover:bg-green hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-linkedin">
+                    <path
+                        d="M0 3C0 1.34315 1.34315 0 3 0H21C22.6569 0 24 1.34315 24 3V21C24 22.6569 22.6569 24 21 24H3C1.34315 24 0 22.6569 0 21V3Z" />
+                    <path
+                        d="M8 8V16H12V14C12 12.9391 12.3686 12.0294 13.0294 11.3686C13.6902 10.7078 14.6 10.3392 15.6608 10.3392C16.7217 10.3392 17.6314 10.7078 18.2922 11.3686C18.953 12.0294 19.3217 12.9391 19.3217 14V16H23V8H19.3217V9.6829C19.3217 9.6829 19.3217 9.6829 19.3217 8H15.3217C15.3217 8 15.3217 9.345 15.3217 9.6829V16H19V16H19V14C19 13.1209 18.8289 12.2029 18.4945 11.3465C18.1601 10.4901 17.6735 9.71445 17.0709 9.11187C16.4683 8.5093 15.6927 8.02268 14.8363 7.68833C13.9799 7.35399 13.0619 7.18291 12.1829 7.18291H12V9.6829C12 9.6829 12 9.6829 12 8H8Z" />
+                </svg>
             </a>
-            <a href="https://www.instagram.com/techvidya_foundation/?hl=en" target="_blank">
+            <a href="https://www.instagram.com/techvidya_foundation/?hl=en" target="_blank"
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-antiquewhite text-black text-2xl hover:bg-green hover:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z" stroke="#db46b0" stroke-width="1.5" stroke-linejoin="round"/>
-                <path d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z" stroke="#db46b0" stroke-width="1.5"/>
-                <path d="M17.5078 6.5L17.4988 6.5" stroke="#db46b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+                    <path
+                        d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2                2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12ZM12 16.5C9.23858 16.5 7.5 14.7614 7.5 12C7.5 9.23858 9.23858 7.5 12 7.5C14.7614 7.5 16.5 9.23858 16.5 12C16.5 14.7614 14.7614 16.5 12 16.5ZM12 9.5C10.6193 9.5 9.5 10.6193 9.5 12C9.5 13.3807 10.6193 14.5 12 14.5C13.3807 14.5 14.5 13.3807 14.5 12C14.5 10.6193 13.3807 9.5 12 9.5ZM17.75 6.5H18.25V6C18.25 5.80109 18.1482 5.62586 17.973 5.525C17.7978 5.42414 17.5607 5.41667 17.35 5.5L17.25 5.75C17.1511 5.88763 17.1215 6.05163 17.17 6.2L17.73 7.5H16.27L16.83 6.2C16.8785 6.05163 16.8489 5.88763 16.75 5.75L16.65 5.5C16.4393 5.41667 16.2022 5.42414 16.027 5.525C15.8518 5.62586 15.75 5.80109 15.75 6V6.5H16.25H17.75Z"
+                        fill="currentColor"></path>
+                </svg>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100093706646826" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1877F2">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z" stroke="#1877F2" stroke-width="1.5" stroke-linejoin="round"/>
-              </svg>
+            <a href="https://www.facebook.com/techvidya_foundation/" target="_blank"
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-antiquewhite text-black text-2xl hover:bg-green hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    class="feather feather-facebook">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.1148 2H4.88483C3.84437 2 3 2.87427 3 3.93939V20.0606C3 21.1257 3.84437 22 4.88483 22H12.2631V14.7059H10.2444V11.3904H12.2631V9.43083C12.2631 6.76555 13.9331 5.5 16.1866 5.5C17.2971 5.5 18.2478 5.58321 18.4874 5.61851V7.90702L16.9262 7.90777C15.7858 7.90777 15.5443 8.5208 15.5443 9.4458V11.3904H18.3526L17.9124 14.7059H15.5443V22H19.1148C20.1552 22 21 21.1257 21 20.0606V3.93939C21 2.87427 20.1552 2 19.1148 2Z"
+                        fill="currentColor"></path>
+                </svg>
             </a>
         </div>
-        <div class="copyright">
-            <p>© Copyright | TechVidya Foundation. All Right Reserved</p>
-        </div>
+        <p class="text-sm">© 2024 TechVidhya Foundation. All rights reserved.</p>
     </footer>
+    <style>
+        .input-box input,
+        .input-box textarea {
+            border: 1px solid black;
+        }
+    </style>
+    
+    
+
+    <!-- Script to handle mobile navigation toggle -->
+    <script>
+        const menu = document.getElementById('menu');
+        const nav = document.getElementById('nav');
+
+        menu.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
-<script src="../Feedback/feedback_script.js"></script>
+
 </html>
+
